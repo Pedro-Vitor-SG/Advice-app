@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+    --bg-primary: hsl(218, 23%, 16%);
+    --bg-secondary: hsl(217, 19%, 24%);
+    --neon-green: hsl(150, 100%, 66%);
+    --light-cyan: hsl(193, 38%, 86%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-primary);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+}
+
+.advice {
+    background: var(--bg-secondary);
+    width: 550px;
+    border-radius: 10px;
+    padding: 2.5rem 2rem 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    margin-bottom: 5rem;
+}
+
+.advice>p {
+    color: var(--neon-green);
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 1rem;
+}
+
+.advice-setence {
+    color: var(--light-cyan);
+    line-height: 28px;
+    margin-bottom: 2rem;
+    font-size: 22px;
+}
+
+.divider-mob {
+    display: none;
+}
+
+.icon-dice {
+    position: relative;
+    top: 20px;
+    margin-top: 20px;
+    background-color: var(--neon-green);
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.icon-dice:hover {
+    box-shadow: 0px 0px 20px var(--neon-green);
+}
+
+.attribution {
+    font-size: 14px;
+    text-align: center;
+    color: var(--neon-green);
+
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--light-cyan);
+    transition: .3s;
+}
+
+.attribution a:hover {
+    color: var(--neon-green);
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+    .divider-mob {
+        display: block;
+    }
+
+    .divider-desk {
+        display: none;
+    }
+
+    .advice {
+        width: 320px;
+        padding: 2.5rem .5rem 0px;
+    }
+
+    .advice-setence {
+        font-size: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 374px) {
+    .advice {
+        width: 280px;
+    }
+}
